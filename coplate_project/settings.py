@@ -148,7 +148,19 @@ AUTHENTICATION_BACKENDS = [
 
 ACCOUNT_SIGNUP_REDIRECT_URL = 'index'
 LOGIN_REDIRECT_URL = 'index'
-ACCOUNT_LOGOUT_ON_GET = True
+# True; 로그아웃할 것인지 물어보지 않기
+ACCOUNT_LOGOUT_ON_GET = True 
+# username 대신 email로 로그인 / username과 email 둘다 허용하려면 'username_email'
+ACCOUNT_AUTHENTICATION_METHOD = 'email' 
+# email로 로그인 설정
+ACCOUNT_EMAIL_REQUIRED = True
+# username 로그인 설정 해제
+ACCOUNT_USERNAME_REQUIRED = False
+# Remember me 체크박스가 사라지고 항상 기억하는 것으로 설정 / 영원하게 할 수는 없음
+ACCOUNT_SESSION_REMEMBER = True
+# 로그인 지속시간 설정 _ 초 단위
+#SSESION_COOKIE_AGE = 3600
+
 # Email settings
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
