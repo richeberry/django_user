@@ -97,16 +97,7 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+   "NAME": "coplate.validators.CustomPasswordValidator",
     },
 ]
 
@@ -114,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko'
 
 TIME_ZONE = 'UTC'
 
@@ -162,6 +153,8 @@ ACCOUNT_SIGNUP_FORM_CLASS = "coplate.forms.SignupForm"
 ACCOUNT_SESSION_REMEMBER = True
 # 로그인 지속시간 설정 _ 초 단위
 #SSESION_COOKIE_AGE = 3600
+# 필드 입력값이 기준에 못미쳐도 사라지지 않게 하기
+ACCOUNT_PASSWORD_INPUT_RENDER_VALUE = True
 
 # Email settings
 
