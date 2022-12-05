@@ -156,6 +156,8 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 # username 로그인 설정 해제
 ACCOUNT_USERNAME_REQUIRED = False
+# signup할 시에 coplate>forms.py>SignupForm 폼 따르기
+ACCOUNT_SIGNUP_FORM_CLASS = "coplate.forms.SignupForm"
 # Remember me 체크박스가 사라지고 항상 기억하는 것으로 설정 / 영원하게 할 수는 없음
 ACCOUNT_SESSION_REMEMBER = True
 # 로그인 지속시간 설정 _ 초 단위
