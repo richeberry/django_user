@@ -9,7 +9,7 @@ class SignupForm(forms.ModelForm):
 
     def signup(self, request, user): # form으로 입력받는 데이터를 유저 인스턴스에 저장
         user.nickname = self.cleaned_data["nickname"]
-        user.kakao_id = self.cleaned_date["kakao_id"]
+        user.kakao_id = self.cleaned_data["kakao_id"]
         user.address = self.cleaned_data["address"]
         
         user.save()
